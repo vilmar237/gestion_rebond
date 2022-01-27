@@ -19,8 +19,9 @@ Route::post('user-login', [App\Http\Controllers\PublicController::class, 'user_l
 Route::post('user-register', [App\Http\Controllers\PublicController::class, 'customer_register']);
 Route::post('user-logout', [App\Http\Controllers\PublicController::class, 'user_logout']);
 
-Route::group(['prefix' => 'admin'], function() {
-    Auth::routes();
+Auth::routes();
+Route::group(['prefix' => 'admin','middleware' => 'officeadmin'], function() {
+    
     Route::post("logout", [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
     Route::get("/", [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth']);
     

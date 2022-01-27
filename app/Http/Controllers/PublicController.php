@@ -127,21 +127,38 @@ class PublicController extends Controller
             } else {
                 if($request->debut != $request->fin)
                 {
-                    $timeDifference = Carbon::parse($request->fin)->diffInMinutes(Carbon::parse($request->debut));
-                    $sd = $timeDifference / 60; // decimal hours
-                    $whole = intval($sd);
-                    $nouveauPrix = 10000*$whole;
-                    $id = Reservation::create(['id_user' => Auth::user()->id,
-                        'day' => $request->day,
-                        'debut' => $request->debut,
-                        'fin' => $request->fin,
-                        'id_type_terrain' => $request->type_stade,
-                        'prix' => $nouveauPrix,
-                    ])->id;
+                    //$check_available_booking = Reservation::where('day',$request->day)->where('debut',$request->debut)->where('fin',$request->fin)->first();
+                    $check_available_booking1 = Reservation::where('day',$request->day)->get();
+                    foreach($check_available_booking1 as $reserv)
+                    {
+                        if($request->debut == $reserv->debut && $request->fin <= $reserv->fin)
+                        {
+                            return back()->withErrors(['error' => 'Intervalle horaire non disponible']);
+                        }
+                        else if($request->debut == $reserv->debut && $request->fin >= $reserv->fin){
+                            return back()->withErrors(['error' => 'Vous pouvez uniquement faire des reservations à partir d\'une heure supérieure à '.$reserv->fin.' pour la date choisie']);
+                        }
+                    }
 
-                    $booking = Reservation::find($id);
-                    //$booking->id_type_terrain = $request->type_stade;
-                    $booking->save();
+                    //if($check_available_booking == null)
+                    //{
+                        $timeDifference = Carbon::parse($request->fin)->diffInMinutes(Carbon::parse($request->debut));
+                        $sd = $timeDifference / 60; // decimal hours
+                        $whole = intval($sd);
+                        $nouveauPrix = 10000*$whole;
+                        $id = Reservation::create(['id_user' => Auth::user()->id,
+                            'day' => $request->day,
+                            'debut' => $request->debut,
+                            'fin' => $request->fin,
+                            'id_type_terrain' => $request->type_stade,
+                            'prix' => $nouveauPrix,
+                        ])->id;
+
+                        $booking = Reservation::find($id);
+                        //$booking->id_type_terrain = $request->type_stade;
+                        $booking->save();
+                    //}
+                    //return back()->withErrors(['error' => 'Reservation non disponible.']);
                 }
                 else{
                     return back()->withErrors(['error' => 'L\'heure de début est égale à l\'heure de fin. Veuillez réessayer.']);
