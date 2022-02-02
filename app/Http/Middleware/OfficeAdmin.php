@@ -21,12 +21,7 @@ class OfficeAdmin
             //dd(Auth::user()->role == "D");
             return redirect("admin");
         }
-        else
-        {
-            //dd(Auth::user()->role == "C");
-            return redirect("/");
-            //return $next($request);
-        }
+        return $next($request);
         
     }
 }

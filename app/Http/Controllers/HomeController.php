@@ -15,8 +15,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
-        $this->middleware('auth');
+        //$this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -26,8 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data=TypeTerrain::all();
-        return view('home',['data'=>$data]);
+        if (Auth::user()->role == "D") {
+            $data=TypeTerrain::all();
+            return view('home',['data'=>$data]);
+        }
+        elseif (Auth::user()->role == "C"){
+            return redirect('/');
+        }
     }
 
     public function create()
