@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth as Login;
 use Illuminate\Support\Facades\Validator;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\TypeTerrain;
@@ -57,10 +58,12 @@ class PublicController extends Controller
             } else {
                 Auth::logout();
                 $request->session()->invalidate();
-                return back()->withErrors(["error" => "Identifiants de connexion invalides ou client non vérifié."], 'login')->withInput();
+                notify()->error( 'Identifiants de connexion invalides ou client non vérifié');
+                return back();
             }
         }else {
-            return back()->withErrors(["error" => "Authentification invalide"], 'login')->withInput();
+            notify()->error( 'Authentification invalide');
+            return back();
         }
     }
 
@@ -98,7 +101,8 @@ class PublicController extends Controller
         $user->username = $request->name;
         $user->save();
 
-        return back()->with('success', 'Vous êtes inscrit avec succès ! veuillez vous connecter ici.');
+        notify()->success( 'Vous êtes inscrit avec succès ! veuillez vous connecter ici');
+        return back();
 
     }
 
@@ -114,6 +118,7 @@ class PublicController extends Controller
 
     public function book(Request $request)
     {
+        
         if (Auth::user() && Auth::user()->role == 'C') {
             $validation = Validator::make($request->all(), [
                 'day' => 'required',
@@ -127,8 +132,11 @@ class PublicController extends Controller
             } else {
                 $hour_now = Carbon::now()->format('H:i');
 
+                $todayDate = Carbon::now()->format('d-m-Y');
+                //dd($todayDate);
+
                 //dd($hour_now);
-                if($request->debut > $hour_now)//<=
+                if($request->debut > $hour_now && $request->fin > $request->debut && $request->day =! $todayDate)//<=
                 {
                     if($request->debut != $request->fin)
                     {
@@ -136,12 +144,15 @@ class PublicController extends Controller
                         $check_available_booking1 = Reservation::where('day',$request->day)->get();
                         foreach($check_available_booking1 as $reserv)
                         {
-                            if($request->debut == $reserv->debut && $request->fin <= $reserv->fin)
+                            //echo $reserv->day;
+                            if($request->debut == $reserv->debut && $request->fin <= $reserv->fin || $request->debut >= $reserv->debut && $request->fin <= $reserv->fin)
                             {
-                                return back()->withErrors(['error' => 'Intervalle horaire non disponible']);
+                                Toastr::error('Intervalle horaire non disponible','Erreur');
+                                return back();
                             }
                             else if($request->debut == $reserv->debut && $request->fin >= $reserv->fin){
-                                return back()->withErrors(['error' => 'Vous pouvez uniquement faire des reservations à partir d\'une heure supérieure à '.$reserv->fin.' pour la date choisie']);
+                                Toastr::error('Vous pouvez uniquement faire des reservations à partir d\'une heure supérieure à '.$reserv->fin.' pour la date choisie','Erreur');
+                                return back();
                             }
                         }
 
@@ -163,19 +174,24 @@ class PublicController extends Controller
                             //$booking->id_type_terrain = $request->type_stade;
                             $booking->save();
                         //}
-                        //return back()->withErrors(['error' => 'Reservation non disponible.']);
+                        Toastr::success('Reservation effectuée avec succès','Reservation');
+                        return back();
                     }
                     else{
-                        return back()->withErrors(['error' => 'L\'heure de début est égale à l\'heure de fin. Veuillez réessayer.']);
+                        Toastr::error('L\'heure de début est égale à l\'heure de fin. Veuillez réessayer','Erreur');
+                        return back();
                     }
                 }
                 else{
-                    return back()->withErrors(['error' => 'L\'heure de début est déjà passée']);
+                    Toastr::error('Horaires non conformes. Veuillez réessayer','Erreur');
+                    return back();
                 }
             }
-            return back()->withErrors(['success' => 'Reservation effectuée avec succès.']);
+            //notify()->success( 'Reservation effectuée avec succès');
+            //return back();
         } else {
-            return redirect("user-login")->withErrors(["error" => "Veuillez vous connecter au préalable"]);
+            Toastr::error('Veuillez vous connecter au préalable','Erreur');
+            return redirect("user-login");
         }
 
     }
