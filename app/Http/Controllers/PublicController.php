@@ -136,7 +136,7 @@ class PublicController extends Controller
                 //dd($todayDate);
 
                 //dd($hour_now);
-                /if($request->debut > $hour_now && $request->fin > $request->debut && $request->day != $todayDate)//<=
+                //if($request->debut > $hour_now && $request->fin > $request->debut && $request->day != $todayDate)//<=
                 //{
                     if($request->debut != $request->fin)
                     {
