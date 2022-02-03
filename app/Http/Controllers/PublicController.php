@@ -12,6 +12,7 @@ use App\Enums\UserRoles;
 use App\Models\Hour;
 use App\Models\User;
 use Carbon\Carbon;
+use Session;
 use Auth;
 
 class PublicController extends Controller
@@ -40,9 +41,15 @@ class PublicController extends Controller
         return view('frontend.index', compact('already_exists_reservations','hours','selectedID','type_terrain'));
     }
 
-    public function userlogin()
+    public function userlogin(Request $request)
     {
 
+        $dat = Session::get('data');
+        //dd(Session::get('data'));
+        if($dat == 1)
+        {
+            Toastr::error('Veuillez vous connecter au préalable','Erreur');
+        }
         return view('auth.userlogin');
     }
 
@@ -190,8 +197,9 @@ class PublicController extends Controller
             //notify()->success( 'Reservation effectuée avec succès');
             //return back();
         } else {
+            $data = 1;
             Toastr::error('Veuillez vous connecter au préalable','Erreur');
-            return redirect("user-login");//fdfdfdfdfjdfdfjdjfdfdfdfdjfdjfjdfjdfjdjffdjfd
+            return redirect("user-login")->with( ['data' => $data] );
         }
 
     }

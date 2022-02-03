@@ -1,7 +1,7 @@
 <?php
 Auth::routes();
 
-Route::namespace ('Admin')->group(function () {
+//Route::namespace ('Admin')->group(function () {
     Route::get("/", [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth']);
     //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth']);
     Route::post("logout", [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
@@ -23,4 +23,4 @@ Route::namespace ('Admin')->group(function () {
         Route::resource('reservation',App\Http\Controllers\ReservationController::class);
         Route::post('reservation/approve/', [App\Http\Controllers\ReservationController::class, 'processApprove']);
     });
-});
+//});
