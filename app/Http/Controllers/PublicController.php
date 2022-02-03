@@ -58,11 +58,11 @@ class PublicController extends Controller
             } else {
                 Auth::logout();
                 $request->session()->invalidate();
-                notify()->error( 'Identifiants de connexion invalides ou client non vérifié');
+                Toastr::error('Identifiants de connexion invalides ou client non vérifié','Reservation');
                 return back();
             }
         }else {
-            notify()->error( 'Authentification invalide');
+            Toastr::error('Authentification invalide','Reservation');
             return back();
         }
     }
@@ -101,7 +101,7 @@ class PublicController extends Controller
         $user->username = $request->name;
         $user->save();
 
-        notify()->success( 'Vous êtes inscrit avec succès ! veuillez vous connecter ici');
+        Toastr::success('Vous êtes inscrit avec succès ! veuillez vous connecter ici','Reservation');
         return back();
 
     }
@@ -136,8 +136,8 @@ class PublicController extends Controller
                 //dd($todayDate);
 
                 //dd($hour_now);
-                if($request->debut > $hour_now && $request->fin > $request->debut && $request->day =! $todayDate)//<=
-                {
+                //if($request->debut > $hour_now && $request->fin > $request->debut && $request->day != $todayDate)//<=
+                //{
                     if($request->debut != $request->fin)
                     {
                         //$check_available_booking = Reservation::where('day',$request->day)->where('debut',$request->debut)->where('fin',$request->fin)->first();
@@ -181,17 +181,17 @@ class PublicController extends Controller
                         Toastr::error('L\'heure de début est égale à l\'heure de fin. Veuillez réessayer','Erreur');
                         return back();
                     }
-                }
-                else{
-                    Toastr::error('Horaires non conformes. Veuillez réessayer','Erreur');
-                    return back();
-                }
+                //}
+                //else{
+                //    Toastr::error('Horaires non conformes. Veuillez réessayer','Erreur');
+                //    return back();
+                //}
             }
             //notify()->success( 'Reservation effectuée avec succès');
             //return back();
         } else {
             Toastr::error('Veuillez vous connecter au préalable','Erreur');
-            return redirect("user-login");
+            return redirect("user-login");//fdfdfdfdfjdfdfjdjfdfdfdfdjfdjfjdfjdfjdjffdjfd
         }
 
     }
