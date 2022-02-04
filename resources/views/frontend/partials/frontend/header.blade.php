@@ -5,7 +5,7 @@
       <div class="col-md-5">
           <!-- Logo start -->
           <div class="brand">
-              <h1><a class="scroll-to" href="#top"><img class="img-responsive" src="img/logo-red.gif" alt="Terrain mutisports"></a></h1>
+              <h1><a class="scroll-to" href="#top"><img class="img-responsive" src="frontend/img/logo1.png" width="100" alt="Terrain mutisports"></a></h1>
           </div>
           <!-- Logo end -->
       </div>
