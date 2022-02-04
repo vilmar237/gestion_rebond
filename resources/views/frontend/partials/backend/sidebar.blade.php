@@ -5,7 +5,7 @@
     <div class="deznav-scroll">
         <div class="main-profile">
             <div class="image-bx">
-                <img src="images/Untitled-1.jpg" alt="">
+                <img src="frontend/img/moi.jpg" alt="">
                 <a href="javascript:void(0);"><i class="fa fa-cog" aria-hidden="true"></i></a>
             </div>
             <h5 class="name"><span class="font-w400">Hello,</span> Vilmar</h5>
@@ -33,7 +33,7 @@
                     
                 </ul>
             </li>
-            <li class="nav-label">Chambres</li>
+            <li class="nav-label">Stades</li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-077-menu-1"></i>
                     <span class="nav-text">Stades</span>

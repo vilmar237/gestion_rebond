@@ -13,19 +13,19 @@
             @foreach($bookings as $booking)
             <div class="booking">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <h6 class="primary">Jour</h6>
                         <p> {{Carbon\Carbon::parse($booking->day)->format('d-m-Y') }}</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <h6 class="primary">Heure de début</h6>
                         <p> {{ $booking->debut }}</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <h6 class="primary">Heure de fin</h6>
                         <p> {{ $booking->fin }}</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <h6 class="primary">Prix</h6>
                         <p> {{ $booking->prix }}</p>
                     </div>
@@ -39,6 +39,7 @@
                     </div>
                 </div>
             </div>
+            ......................................................................................................................................................................................................................................................................................................................
             @endforeach
         @else
             <h4 class="text-center">Aucun Enregistrement Trouvé.</h4>    
