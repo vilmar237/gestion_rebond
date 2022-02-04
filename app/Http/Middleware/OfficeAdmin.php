@@ -19,7 +19,8 @@ class OfficeAdmin
     {
         if (Auth::user()->role == "D" && Auth::user()->id != $request->get("id")) {
             //dd(Auth::user()->role == "D");
-            return redirect("admin");
+            //return redirect("admin");
+            return $next($request);
         }
         return $next($request);
         
