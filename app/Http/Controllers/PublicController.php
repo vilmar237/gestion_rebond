@@ -145,6 +145,11 @@ class PublicController extends Controller
                 //dd($hour_now);
                 //if($request->debut > $hour_now && $request->fin > $request->debut && $request->day != $todayDate)//<=
                 //{
+
+                   if($request->fin < $request->debut){
+                    Toastr::error('L heure de fin doit etre superieur à l heure de debut','Erreur');
+                    return back();
+                   }
                     if($request->debut != $request->fin)
                     {
                         //$check_available_booking = Reservation::where('day',$request->day)->where('debut',$request->debut)->where('fin',$request->fin)->first();
@@ -152,12 +157,13 @@ class PublicController extends Controller
                         foreach($check_available_booking1 as $reserv)
                         {
                             //echo $reserv->day;
+                            
                             if($request->debut == $reserv->debut && $request->fin <= $reserv->fin || $request->debut >= $reserv->debut && $request->fin <= $reserv->fin)
                             {
                                 Toastr::error('Intervalle horaire non disponible','Erreur');
                                 return back();
                             }
-                            else if($request->debut == $reserv->debut && $request->fin >= $reserv->fin){
+                            else if($request->debut == $reserv->debut && $request->fin >= $reserv->fin || $request->debut >= $reserv->debut && $request->debut <= $reserv->fin ){
                                 Toastr::error('Vous pouvez uniquement faire des reservations à partir d\'une heure supérieure à '.$reserv->fin.' pour la date choisie','Erreur');
                                 return back();
                             }

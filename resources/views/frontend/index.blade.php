@@ -109,7 +109,7 @@
                                     </option>
                                 @endforeach   
                             </select>
-                              <p>Prix: <span class="show-room-price"></span></p>
+                              <p>Prix: <span class="show-room-price">10.000 /h</span></p>
                           </td>
                       </tr>
                       <tr>
