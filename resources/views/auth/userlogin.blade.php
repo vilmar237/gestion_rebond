@@ -4,11 +4,13 @@
 @guest
                            
 
-    @if (Route::has('register'))
+    {{-- @if (Route::has('register'))
+    <div class="container">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            <a class="nav-link" href="{{ route('register') }}">{{ __('Creer un compte?') }}</a>
         </li>
-    @endif
+    </div>
+    @endif --}}
 @else
 @endguest
 <div class="container">
@@ -89,4 +91,12 @@
         </div>
     </div>
 </div>
+<div class="contact-box-border">&nbsp;</div>
+@if (Route::has('register'))
+<div class="container">
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('register') }}"><button type="submit">{{ __('Creer un compte?') }}</button></a>
+    </li>
+</div>
+@endif
 @endsection
