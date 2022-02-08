@@ -47,5 +47,7 @@
     </div>
 </section>
 <!-- End bookings -->
+
+
 <!-- Contact tiles -->
 @endsection

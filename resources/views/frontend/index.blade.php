@@ -73,7 +73,7 @@
                           <td><input id="datefield" name="day" min='1899-01-01' type="date" class="form-control" /></td>
                       </tr>
                       <tr>
-                          <th>Date de début <span class="text-danger">*</span></th>
+                          <th>Vous commencez à ? <span class="text-danger">*</span></th>
                           <td>
                             <select class="form-control select1" name="debut">
                                   <option>Choisir une heure de début</option>
@@ -86,7 +86,7 @@
                           </td>
                       </tr>
                       <tr>
-                          <th>Date de fin <span class="text-danger">*</span></th>
+                          <th>Pour terminer à ? <span class="text-danger">*</span></th>
                           <td>
                             <select class="form-control select2" name="fin">
                                   <option>Choisir une heure de fin</option>
@@ -99,7 +99,7 @@
                           </td>
                       </tr>
                       <tr>
-                          <th>Espaces disponibles <span class="text-danger">*</span></th>
+                          <th>Motif de réservation <span class="text-danger">*</span></th>
                           <td>
                             <select class="form-control" name="type_stade">
                                 <option>Choisir l'activité à mener</option>
