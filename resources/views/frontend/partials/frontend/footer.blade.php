@@ -1,69 +1,100 @@
 <a href="#" class="scrollup">ScrollUp</a>
 <!-- Services start -->
-<section id="services" class="container">
+ <!-- Contact start -->
+ <section id="contact" class="container wow bounceInUp" data-wow-offset="50">
   <div class="row">
     <div class="col-md-12 title">
-      <h2> Services</h2>
-      <span class="underline">&nbsp;</span>
+      <h2>Nous joindre</h2>
     </div>
-
-    <!-- Service Box start -->
-    <div class="col-md-6">
-      <div class="service-box wow fadeInLeft" data-wow-offset="100">
-        <div class="service-icon">#</div>
-        <h3 class="service-title">Rapidité</h3>
+    <div class="col-md-3 col-xs-12 pull-right">
+      <h4 class="contact-box-title">Service client</h4>
+      <div class="contact-box">
+        <img src="img/contact-box-img1.jpg" alt="contact-img">
+        <div class="contact-box-name">Go sport </div>
+        <div class="contact-box-phon"><span class="highlight">Phone:</span> 8888888</div>
+        <div class="contact-box-email"><span class="highlight">Email:</span> gosport@gmail.com</div>
         <div class="clearfix"></div>
-        <p class="service-content">Reserver facilement et rapidement en moins de 03 min sur la plateforme afin d'avoir une plage horaire sur le stade.</p>
       </div>
+      <div class="contact-box-border">&nbsp;</div>
+
+      <div class="contact-box-divider">&nbsp;</div>
+
+      <h4 class="contact-box-title">Change or Cancel Reservation</h4>
+      <div class="contact-box">
+        <img src="img/contact-box-img2.jpg" alt="contact-img">
+        <div class="contact-box-name">City sport</div>
+        <div class="contact-box-phon"><span class="highlight">Phone:</span> 77777777</div>
+        <div class="contact-box-email"><span class="highlight">Email:</span> city@.com</div>
+        <div class="clearfix"></div>
+      </div>
+     
     </div>
-    <!-- Service Box end -->
+
+     {{-- le map du stade 
 
 
+<div class="container">
+  <div class="row my-5 d-flex justify-content-center">
 
     
-    <!-- Service Box start -->
-    <div class="col-md-6">
-      <div class="service-box wow fadeInRight" data-wow-offset="100">
-        <div class="service-icon">#</div>
-        <h3 class="service-title">Réglement électronique</h3>
-        <div class="clearfix"></div>
-        <p class="service-content">Regler votre réservation par paiement électronique.</p>
-        <img src="frontend/img/mtnOrange.jpg" width="70" alt=""/>
-      </div>
-    </div>
-    <!-- Service Box end -->
 
-    <!-- Service Box start -->
-    <div class="col-md-6">
-      <div class="service-box wow fadeInLeft" data-wow-offset="100">
-        <div class="service-icon">#</div>
-        <h3 class="service-title">Réservations illimitées</h3>
-        <div class="clearfix"></div>
-        <p class="service-content">vous avez la possibilité d'effetuer plusieurs réservations et à des jours differents sur le stade Rebond Athletics Playground.</p>
-      </div>
-    </div>
-    <!-- Service Box end -->
+  </div>
+</div> --}}
+    <div class="col-md-3">
 
-    <!-- Service Box start -->
-    <div class="col-md-6">
-      <div class="service-box wow fadeInRight" data-wow-offset="100">
-        <div class="service-icon">#</div>
-        <h3 class="service-title">Assistance disponible</h3>
-        <div class="clearfix"></div>
-        <div class="contact-box">
-          <img src="frontend/img/moi.jpg" width="35" alt="contact-img">
-          <div class="contact-box-name">vilmar237</div>
-          <div class="contact-box-phon"><span class="highlight">Phone:</span> 666-999-888</div>
-          <div class="contact-box-email"><span class="highlight">Email:</span> vilmar@example.com</div>
-          <div class="clearfix"></div>
+      <!-- Card -->
+      <div class="card map-card" style="width: 23rem;">
+
+        <!--Google map-->
+        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+          <iframe src="https://maps.google.com/maps?q=casino%20bonapriso%20douala&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
         </div>
+
+       
+
       </div>
+      <!-- Card -->
+
     </div>
-    <!-- Service Box end -->
+    <div class="col-md-6 col-xs-12 pull-left">
+      <p class="contact-info">Avez vous des préoccupations particulieres? <br>
+        <span class="address"><span class="highlight">Address:</span> Rebond Athletics Playground, bonapriso Douala</span></p>
+        <form action="#" method="post" id="contact-form" name="contact-form">
+            <input type="hidden" name="action" value="send_contact_form"/>
+            <input type="text" class="website_hp" name="website_hp"/>
+
+          <div class="alert hidden" id="contact-form-msg"></div>
+
+          <div class="form-group">
+            <input type="text" class="form-control first-name text-field" name="first-name" placeholder="First Name:">
+            <input type="text" class="form-control last-name text-field" name="last-name" placeholder="Last Name:">
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" class="form-control telephone text-field" name="telephone" placeholder="Telephone:">
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control email text-field" name="email" placeholder="Email:">
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control message" name="message" placeholder="Message:"></textarea>
+          </div>
+
+            <input type="submit" class="btn submit-message" name="submit-message" value="Envoyer">
+
+
+        </form>
+    </div>
 
   </div>
 </section>
+<!-- Contact end -->
 <!-- Services end -->
+
 
 <!-- Footer start -->
 <footer>

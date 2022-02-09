@@ -77,30 +77,30 @@ body {
 /* Label
 --------------------------------------------*/
 .label-default {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   border-radius: 0;
 }
 /* Tooltip
 --------------------------------------------*/
 .tooltip .tooltip-inner {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   padding: 5px 10px;
   font-size: 18px;
 }
 .tooltip .tooltip-arrow {
-  border-top-color: #c61334 !important;
+  border-top-color: #FFCCCC !important;
 }
 .my-tooltip {
-  border-bottom: 1px dotted #c61334;
-  color: #c61334;
+  border-bottom: 1px dotted #FFCCCC;
+  color: #FFCCCC;
 }
 /* Links
 --------------------------------------------*/
 a {
-  color: #c61334;
+  color: #FFCCCC;
 }
 a:hover {
-  color: #c61334;
+  color: #FFCCCC;
   text-decoration: none;
 }
 /* Scroll to Top Button 
@@ -140,7 +140,7 @@ header .header-info .contact {
   margin-top: 10px;
 }
 header .header-info .language-switch {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   margin-left: 24px;
 }
 header .header-info .language-switch a {
@@ -252,8 +252,8 @@ header.large .brand {
 #teaser {
   height: 600px;
   padding: 60px 0;
-  background-color: #303131;
-  background: linear-gradient(to bottom, #303131 0%, #4d4f4f 50%, #303131 100%);
+  background-color: #CCFFCC;
+  background: linear-gradient(to bottom, #CCFFCC 0%, #4d4f4f 50%, #CCFFCC 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@mainColor', endColorstr='@mainColor', GradientType=0);
 }
 #teaser .reservation-form-shadow {
@@ -269,16 +269,16 @@ header.large .brand {
   padding: 10px 15px;
 }
 #teaser form ::-webkit-input-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 #teaser form :-moz-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 #teaser form ::-moz-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 #teaser form :-ms-input-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 #teaser form .styled-select-car {
   border: 2px solid #efe9e9;
@@ -324,7 +324,7 @@ header.large .brand {
 }
 #teaser form .input-group input {
   border-radius: 0;
-  color: #c61334;
+  color: #FFCCCC;
   font-size: 16px;
   padding-left: 15px;
   box-shadow: none;
@@ -384,11 +384,11 @@ header.large .brand {
   -webkit-appearance: none;
   padding: 10px 10px;
   height: 39px;
-  color: #c61334;
+  color: #FFCCCC;
 }
 #teaser form .submit {
   width: 100%;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -462,7 +462,7 @@ header.large .brand {
 #teaser-blog {
   height: 145px;
   padding: 60px 0;
-  background-color: #c61334;
+  background-color: #FFCCCC;
 }
 #teaser-blog .title {
   color: #fff;
@@ -510,7 +510,7 @@ header.large .brand {
 }
 .blog-posts .blog-post blockquote {
   margin: 35px 27px;
-  border-left: 6px solid #c61334;
+  border-left: 6px solid #FFCCCC;
   font-size: 16px;
   line-height: 1.7;
   font-style: italic;
@@ -526,7 +526,7 @@ header.large .brand {
 }
 .single-post-tags li:first-of-type {
   font-weight: bold;
-  color: #c61334;
+  color: #FFCCCC;
 }
 .single-post-tags li a {
   color: #716d6e;
@@ -536,7 +536,7 @@ header.large .brand {
   float: left;
   width: 130px;
   padding-bottom: 2px;
-  border-bottom: 7px solid #c61334;
+  border-bottom: 7px solid #FFCCCC;
 }
 .author-post .author-content {
   margin-left: 155px;
@@ -556,7 +556,7 @@ header.large .brand {
 }
 .blog-posts .blog-post .post-attachment {
   padding-bottom: 2px;
-  border-bottom: 10px solid #c61334;
+  border-bottom: 10px solid #FFCCCC;
 }
 .blog-posts .blog-post .post-content-text {
   margin-top: 8px;
@@ -593,7 +593,7 @@ header.large .brand {
 .blog-posts .pagination-list li {
   display: inline-block;
   padding: 0 5px;
-  color: #c61334;
+  color: #FFCCCC;
 }
 .blog-posts .pagination-list li a {
   color: #716d6e;
@@ -623,7 +623,7 @@ header.large .brand {
   padding: 0;
 }
 .comment-section .comment-img {
-  border-bottom: 7px solid #c61334;
+  border-bottom: 7px solid #FFCCCC;
   display: inline-block;
   float: left;
   padding-bottom: 2px;
@@ -684,7 +684,7 @@ header.large .brand {
   font-size: 14px !important;
 }
 .comment-section .comment-respond form .submit {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -723,7 +723,7 @@ header.large .brand {
   transition: background 0.4s ease-in-out;
 }
 .blog-posts .sidebar .widget ul li i {
-  color: #c61334;
+  color: #FFCCCC;
   margin: 0 7px;
 }
 .blog-posts .sidebar .widget ul li a {
@@ -737,7 +737,7 @@ header.large .brand {
 }
 .blog-posts .sidebar .widget .tagcloud a {
   color: #fff;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   padding: 6px 20px;
   display: inline-block;
   margin: 4px 4px 0 0;
@@ -751,20 +751,20 @@ header.large .brand {
   clear: both;
 }
 .blog-posts .sidebar .search-widget form ::-webkit-input-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts .sidebar .search-widget form :-moz-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts .sidebar .search-widget form ::-moz-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts .sidebar .search-widget form :-ms-input-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts .sidebar .search-widget form .input-group input {
   border-radius: 0;
-  color: #c61334;
+  color: #FFCCCC;
   font-size: 16px;
   padding-left: 15px;
   box-shadow: none;
@@ -799,7 +799,7 @@ header.large .brand {
   padding-bottom: 45px;
 }
 .blog-posts.error-page .container {
-  border-bottom: 10px solid #c61334;
+  border-bottom: 10px solid #FFCCCC;
 }
 .blog-posts.error-page h2 {
   font-size: 24px;
@@ -832,20 +832,20 @@ header.large .brand {
   margin-top: 20px;
 }
 .blog-posts.error-page form ::-webkit-input-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts.error-page form :-moz-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts.error-page form ::-moz-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts.error-page form :-ms-input-placeholder {
-  color: #c61334 !important;
+  color: #FFCCCC !important;
 }
 .blog-posts.error-page form .input-group input {
   border-radius: 0;
-  color: #c61334;
+  color: #FFCCCC;
   font-size: 16px;
   padding-left: 15px;
   box-shadow: none;
@@ -882,6 +882,7 @@ header.large .brand {
   margin-top: 65px;
   position: relative;
   z-index: 2;
+
 }
 #services .title {
   margin-bottom: 38px;
@@ -897,7 +898,7 @@ header.large .brand {
   height: 4px;
   width: 135px;
   display: block;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   margin: 0 auto;
 }
 #services .service-box {
@@ -908,7 +909,7 @@ header.large .brand {
 #services .service-box .service-icon {
   height: 43px;
   width: 43px;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   text-align: center;
   line-height: 40px;
@@ -932,7 +933,7 @@ header.large .brand {
 /* Newsletter
 --------------------------------------------*/
 #newsletter {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   margin-top: 90px;
   padding: 90px 0;
   position: relative;
@@ -997,7 +998,7 @@ header.large .brand {
 #newsletter .social-icons ul li a {
   height: 55px;
   width: 65px;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   display: block;
   margin-left: 10px;
   text-align: center;
@@ -1166,7 +1167,7 @@ header.large .brand {
   font-size: 18px;
 }
 #vehicles .reserve-button {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   display: block;
   height: 50px;
@@ -1206,7 +1207,7 @@ header.large .brand {
 #reviews .author {
   font-size: 18px;
   font-weight: 900;
-  color: #c61334;
+  color: #FFCCCC;
   margin-top: 10px;
 }
 #reviews .carousel-indicators {
@@ -1291,7 +1292,7 @@ header.large .brand {
   top: -70px;
 }
 #locations .map h2 {
-  color: #c61334;
+  color: #FFCCCC;
   padding: 0 10px;
   margin-bottom: 4px;
 }
@@ -1304,7 +1305,7 @@ header.large .brand {
   height: 0;
   border-left: 37px solid transparent;
   border-right: 37px solid transparent;
-  border-top: 37px solid #c61334;
+  border-top: 37px solid #FFCCCC;
   margin: 0 auto;
 }
 /* Information
@@ -1343,7 +1344,7 @@ header.large .brand {
 #information .btn {
   font-size: 24px;
   font-weight: 900;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   border-radius: 0;
   border: none;
@@ -1360,7 +1361,7 @@ header.large .brand {
   background-color: #716d6e;
 }
 #information .btn-gray:hover {
-  background-color: #c61334;
+  background-color: #FFCCCC;
 }
 #information .video {
   position: relative;
@@ -1400,7 +1401,7 @@ header.large .brand {
   height: 4px;
   width: 135px;
   display: block;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   margin: 0 auto;
 }
 #partners p {
@@ -1429,7 +1430,7 @@ header.large .brand {
   font-weight: 900;
 }
 #contact .contact-info .highlight {
-  color: #c61334;
+  color: #FFCCCC;
 }
 #contact form .form-group {
   margin-bottom: 20px;
@@ -1483,7 +1484,7 @@ header.large .brand {
 #contact form .submit-message {
   font-size: 24px;
   font-weight: 900;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   border: none;
   line-height: 47px;
@@ -1506,10 +1507,10 @@ header.large .brand {
 }
 #contact .contact-box .highlight {
   font-weight: bold;
-  color: #c61334;
+  color: #FFCCCC;
 }
 #contact .contact-box img {
-  border: 1px solid #c61334;
+  border: 1px solid #FFCCCC;
   float: left;
   margin-right: 20px;
 }
@@ -1518,7 +1519,7 @@ header.large .brand {
   font-weight: bold;
 }
 #contact .contact-box-border {
-  background-color: #c61334;
+  background-color: #FFCCCC;
   height: 10px;
   margin-top: 1px;
   margin-bottom: 8px;
@@ -1589,7 +1590,7 @@ footer .footer-nav li a {
 }
 #checkoutModal .modal-header {
   color: #fff;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   border-bottom: none;
 }
 #checkoutModal .modal-title {
@@ -1616,7 +1617,7 @@ footer .footer-nav li a {
 #checkoutModal .modal-body h3 {
   margin: 0;
   font-size: 18px;
-  color: #c61334;
+  color: #FFCCCC;
   font-weight: bold;
   margin-bottom: 25px;
 }
@@ -1785,7 +1786,7 @@ footer .footer-nav li a {
 #checkoutModal .modal-footer .btn {
   font-size: 24px;
   font-weight: 900;
-  background-color: #c61334;
+  background-color: #FFCCCC;
   color: #fff;
   border-radius: 0;
   height: 47px;
@@ -1803,7 +1804,7 @@ footer .footer-nav li a {
   border-color: #ffd992;
 }
 #checkoutModal .modal-footer .btn-yellow button {
-  background-color: #c61334;
+  background-color: #FFCCCC;
 }
 #checkoutModal .modal-footer .btn-gray {
   border-color: #b8b6b6;
@@ -2242,4 +2243,48 @@ footer .footer-nav li a {
   .collapse.in {
     display: block !important;
   }
+}
+
+.map-card .card-body {
+  position: absolute;
+  width: 100%;
+  height: 77%;
+  top: 23%;
+  overflow: hidden;
+  background-color: transparent;
+  transition: all 1s;
+  border-radius:0 !important;
+}
+.map-card .card-body.closed {
+    top: 100%;
+    height: 8.1rem;
+    margin-top: -8.1rem;
+}
+.map-card .map-container {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-card .map-container iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+.map-card .button .btn-floating  {
+ margin-top: -2rem;
+}
+.map-card .living-coral {
+  background-color: #FA7268;
+}
+.map-card .living-coral-text {
+  color: #FA7268;
+}
+.map-card .table th {
+ width: 2rem;
+}
+.map-card .pt-3-5 {
+  padding-top: 1.25rem;
 }
