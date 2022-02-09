@@ -191,7 +191,7 @@ class PublicController extends Controller
                         return back();
                     }
                     else{
-                        Toastr::error('L\'heure de début est égale à l\'heure de fin. Veuillez réessayer','Erreur');
+                        Toastr::error('L\'heure de début est égale à l\'heure de fin. Veuillez modifier','Erreur');
                         return back();
                     }
                 //}

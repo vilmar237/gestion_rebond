@@ -9,7 +9,7 @@
     <div class="col-md-3 col-xs-12 pull-right">
       <h4 class="contact-box-title">Service client</h4>
       <div class="contact-box">
-        <img src="img/contact-box-img1.jpg" alt="contact-img">
+        
         <div class="contact-box-name">Go sport </div>
         <div class="contact-box-phon"><span class="highlight">Phone:</span> 8888888</div>
         <div class="contact-box-email"><span class="highlight">Email:</span> gosport@gmail.com</div>
@@ -21,12 +21,13 @@
 
       <h4 class="contact-box-title">Change or Cancel Reservation</h4>
       <div class="contact-box">
-        <img src="img/contact-box-img2.jpg" alt="contact-img">
+        
         <div class="contact-box-name">City sport</div>
         <div class="contact-box-phon"><span class="highlight">Phone:</span> 77777777</div>
         <div class="contact-box-email"><span class="highlight">Email:</span> city@.com</div>
         <div class="clearfix"></div>
       </div>
+      <div class="contact-box-border">&nbsp;</div>
      
     </div>
 

@@ -5,7 +5,7 @@
       <div class="col-md-5">
           <!-- Logo start -->
           <div class="brand">
-              <h1><a class="scroll-to" href="#top"><img class="img-responsive" src="frontend/img/logo1.png" width="100" alt="Terrain mutisports"></a></h1>
+              <h1><a class="scroll-to" href="#top"><img class="img-responsive" src="frontend/img/logo1.png" width="100" alt="Rebond"></a></h1>
           </div>
           <!-- Logo end -->
       </div>
@@ -33,7 +33,7 @@
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand scroll-to" href="#top"><img class="img-responsive"  src="img/logo-red.gif" alt="Terrain multisports"></a>
+                      <a class="navbar-brand scroll-to" href="#top"><img class="img-responsive"  src="img/logo1.png" alt="Rebond"></a>
                   </div>
                   <!-- Collect the nav links, for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
