@@ -163,7 +163,7 @@ class PublicController extends Controller
                                 Toastr::error('Intervalle horaire non disponible','Erreur');
                                 return back();
                             }
-                            else if($request->debut == $reserv->debut && $request->fin >= $reserv->fin || $request->debut >= $reserv->debut && $request->debut <= $reserv->fin ){
+                            else if($request->debut == $reserv->debut && $request->fin >= $reserv->fin || $request->debut >= $reserv->debut && $request->debut < $reserv->fin ){
                                 Toastr::error('Vous pouvez uniquement faire des reservations à partir d\'une heure supérieure à '.$reserv->fin.' pour la date choisie','Erreur');
                                 return back();
                             }
@@ -186,6 +186,7 @@ class PublicController extends Controller
                             $booking = Reservation::find($id);
                             //$booking->id_type_terrain = $request->type_stade;
                             $booking->save();
+                        
                         //}
                         Toastr::success('Reservation effectuée avec succès','Reservation');
                         return back();

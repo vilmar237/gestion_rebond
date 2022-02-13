@@ -178,7 +178,12 @@
 <body>
     <nav class="v-navbar navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url(config('forum.web.router.prefix')) }}">Laravel Forum</a>
+            <!-- 
+                
+            <a class="navbar-brand" href="{{ url(config('forum.web.router.prefix')) }}">Laravel Forum</a> 
+        
+            -->
+            <li class="active"><a href="{{route('welcome')}}">Accueil</a></li>
             <button class="navbar-toggler" type="button" :class="{ collapsed: isCollapsed }" @click="isCollapsed = ! isCollapsed">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -187,7 +192,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url(config('forum.web.router.prefix')) }}">{{ trans('forum::general.index') }}</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('forum.recent') }}">{{ trans('forum::threads.recent') }}</a>
                     </li>
                     @auth
@@ -199,7 +204,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('forum.category.manage') }}">{{ trans('forum::general.manage') }}</a>
                         </li>
-                    @endcan
+                    @endcan -->
                 </ul>
                 <ul class="navbar-nav">
                     @if (Auth::check())

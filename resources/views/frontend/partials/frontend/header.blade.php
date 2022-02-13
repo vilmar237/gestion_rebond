@@ -39,7 +39,7 @@
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <!-- Nav-Links start -->
                       <ul class="nav navbar-nav navbar-right">
-                          <li class="active"><a href="{{route('welcome')}}" class="scroll-to">Home</a></li>
+                          <li class="active"><a href="{{route('welcome')}}" class="scroll-to">Accueil</a></li>
                           <li><a href="#services" class="scroll-to">Services</a></li>
                           @if(!Auth::guest() && (Auth::user()->role == "C" || Auth::user()->role == "D"))
                           <li><a href="{{url('forum')}}" class="scroll-to">Equipes</a></li>
